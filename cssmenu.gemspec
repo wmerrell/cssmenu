@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
      "VERSION",
      "cssmenu.gemspec",
      "lib/cssmenu.rb",
+     "lib/cssmenu/cssmenu_helpers.rb",
      "test/helper.rb",
      "test/test_cssmenu.rb"
   ]
