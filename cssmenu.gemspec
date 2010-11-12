@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "cssmenu.gemspec",
      "lib/cssmenu.rb",
      "test/helper.rb",
      "test/test_cssmenu.rb"
