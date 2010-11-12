@@ -1,9 +1,44 @@
 = cssmenu
 
-Description goes here.
+= This is _very_ alpha code. I'm just working out how to do gems. Check back later for working code.
+
+== Css Menu System
+
+This set of functions makes adding a CSS configured menu as simple as
+possible. Because it uses CSS for all formatting, it will work even if
+javascript is turned off. If there is no styling, it will degrade
+gracefully to a simple unordered list.
+
+=== Typical Example:
+
+  <%= menubar do -%>
+    <%= menu_item('Back to Home', 'house', root_path()) %>
+    <%= menu_item('New Registration', 'user_add', new_registration_path) %>
+  <%- end -%>
+
+=== Extended Example:
+
+  <%= menubar do -%>
+    <%= menu_item('Back to Home', 'house', root_path()) %>
+    <%= sub_menu('Tagged Actions', 'tag') do -%>
+      <%= menu_item('Send Mail', 'email', nil, nil, :onclick => js_submit('email')) %>
+      <%= menu_item('Delete', 'delete', nil, nil, {:onclick => js_submit('delete', :confirm => "Are you sure you want to delete the tagged registrations?"}) ) %>
+    <%- end -%>
+    <%= sub_menu('Tools', 'cog') do -%>
+      <%= menu_item('Export as CSV', 'report_disk', url_for(:controller=>:registrations, :action=>:index, :format=>:csv)) %>
+      <%= menu_item('Manage Statuses', 'application_view_list', statuses_path) %>
+      <%= menu_item('Manage Documents', 'page_copy', documents_path) %>
+      <%= sub_menu('Sub Item 2', 'add') do -%>
+        <%= menu_item('Sub Sub Item 1', 'add', '#') %>
+        <%= menu_item('Sub Sub Item 2', 'add', '#') %>
+      <%- end -%>
+      <%= menu_item('Sub Item 4', 'add') %>
+    <%- end -%>
+    <%= menu_item('New Registration', 'user_add', new_registration_path) %>
+  <%- end -%>
 
 == Note on Patches/Pull Requests
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a
