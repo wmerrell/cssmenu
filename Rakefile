@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "cssmenu"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{A CSS based menu system for Rails pages.}
+    gem.description = %Q{This is a set of functions to simplify management of a CSS based menu system.}
     gem.email = "will@morelandsolutions.com"
     gem.homepage = "http://github.com/wmerrell/cssmenu"
     gem.authors = ["wmerrell"]
