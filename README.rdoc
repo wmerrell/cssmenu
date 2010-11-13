@@ -1,13 +1,19 @@
-= cssmenu
-
-= This is _very_ alpha code. I'm just working out how to do gems. Check back later for working code.
-
-== Css Menu System
+= Css Menu System
 
 This set of functions makes adding a CSS configured menu as simple as
 possible. Because it uses CSS for all formatting, it will work even if
 javascript is turned off. If there is no styling, it will degrade
-gracefully to a simple unordered list.
+gracefully to a simple unordered list. That means it will work even with
+a text based browser.
+
+=== A note about images in the menus
+
+This will search the /public/images and /public/images/icons directories for
+image files of type .png, .gif, and .jpg, so any image that is of one of those
+types and located in those directories will be found automatically. You do not
+need to supply any more than the file base name. If you want to use a file that
+does not meet those assumptions, you may still supply the full file
+specification.
 
 === Typical Example:
 
